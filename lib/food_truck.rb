@@ -19,7 +19,11 @@ class FoodTruck
   end
 
   def stock(item, quantity)
-    inventory[item] = quantity
+    if inventory.keys.any?(item) == false
+      inventory[item] = quantity
+    else
+      inventory[item] += quantity
+    end
   end
 
 
