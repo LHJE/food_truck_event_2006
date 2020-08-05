@@ -18,7 +18,12 @@ class FoodTruckTest < Minitest::Test
     assert_equal ({}), food_truck.inventory
   end
 
+  def test_check_stock
+    food_truck = FoodTruck.new("Rocky Mountain Pies")
 
+    assert_equal ({}), food_truck.check_stock
+
+  end
 
 
 
