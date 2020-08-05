@@ -24,6 +24,9 @@ class FoodTruck
     end
   end
 
+  def potential_revenue
 
+
+  end
 
 end

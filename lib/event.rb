@@ -28,4 +28,6 @@ class Event
     trucks.compact
   end
 
+
+
 end
