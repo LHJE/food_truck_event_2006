@@ -1,3 +1,5 @@
+require 'pry'
+require './lib/item'
 class FoodTruck
 
   attr_reader :name, :inventory
@@ -25,8 +27,10 @@ class FoodTruck
   end
 
   def potential_revenue
-
-
+    revenue = inventory.map do |item|
+      item[0].price * item[1]
+    end
+    revenue.sum
   end
 
 end
