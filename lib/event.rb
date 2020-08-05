@@ -36,10 +36,9 @@ class Event
     food_trucks.each do |food_truck|
       food_truck.inventory.each do |this_item|
         total_inventory[this_item[0]][:quantity] += this_item[1]
-        total_inventory[this_item[0]][:food_trucks] << this_item[0]
+        total_inventory[this_item[0]][:food_trucks] << food_truck
       end
     end
-    binding.pry
     total_inventory
   end
 
