@@ -29,5 +29,21 @@ class Event
   end
 
 
+  def total_inventory
+    total_inventory = Hash.new do |total_inventory, item|
+      total_inventory[item] = {quantity: 0, food_trucks: []}
+    end
+binding.pry
+  end
+
+
+
+
+
+
+
+
+
+
 
 end
