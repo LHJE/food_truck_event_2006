@@ -15,7 +15,7 @@ class FoodTruckTest < Minitest::Test
     food_truck = FoodTruck.new("Rocky Mountain Pies")
 
     assert_equal "Rocky Mountain Pies", food_truck.name
-    assert_equal [], food_truck.inventory
+    assert_equal ({}), food_truck.inventory
   end
 
 
