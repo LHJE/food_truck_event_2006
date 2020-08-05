@@ -104,7 +104,7 @@ class EventTest < Minitest::Test
     assert_equal result, event.total_inventory
   end
 
-  def test_over_stocked_items
+  def test_overstocked_items
     event = Event.new("South Pearl Street Farmers Market")
     food_truck1 = FoodTruck.new("Rocky Mountain Pies")
     food_truck2 = FoodTruck.new("Ba-Nom-a-Nom")
@@ -123,7 +123,7 @@ class EventTest < Minitest::Test
     event.add_food_truck(food_truck2)
     event.add_food_truck(food_truck3)
 
-    assert_equal item1, event.over_stocked_items
+    assert_equal item1, event.overstocked_items
   end
 
 

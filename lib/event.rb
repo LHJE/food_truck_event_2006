@@ -42,7 +42,14 @@ class Event
     total_inventory
   end
 
-
+  def overstocked_items
+    overstocked_items = total_inventory.map do |inventory|
+      if inventory[1][:quantity] > 50 && inventory[1][:food_trucks].count > 1
+        inventory[0]
+      end
+    end
+    overstocked_items.compact.reduce
+  end
 
 
 
