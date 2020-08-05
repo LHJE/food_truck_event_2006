@@ -51,7 +51,12 @@ class Event
     overstocked_items.compact.reduce
   end
 
-
+  def sorted_item_list
+    sorted_item_list = total_inventory.map do |inventory|
+      inventory[0].name
+    end
+    sorted_item_list.sort
+  end
 
 
 
