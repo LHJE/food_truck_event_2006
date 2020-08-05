@@ -33,7 +33,12 @@ class Event
     total_inventory = Hash.new do |total_inventory, item|
       total_inventory[item] = {quantity: 0, food_trucks: []}
     end
-binding.pry
+    food_trucks.each do |food_truck|
+      food_truck.inventory.each do |this_item|
+        total_inventory[this_item[0]][:quantity] += this_item[1]
+        binding.pry
+      end
+    end
   end
 
 
