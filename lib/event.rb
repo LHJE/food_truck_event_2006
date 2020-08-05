@@ -30,15 +30,17 @@ class Event
 
 
   def total_inventory
-    total_inventory = Hash.new do |total_inventory, item|
-      total_inventory[item] = {quantity: 0, food_trucks: []}
+    total_inventory = Hash.new do |inventory, item|
+      inventory[item] = {quantity: 0, food_trucks: []}
     end
     food_trucks.each do |food_truck|
       food_truck.inventory.each do |this_item|
         total_inventory[this_item[0]][:quantity] += this_item[1]
-        binding.pry
+        total_inventory[this_item[0]][:food_trucks] << this_item[0]
       end
     end
+    binding.pry
+    total_inventory
   end
 
 

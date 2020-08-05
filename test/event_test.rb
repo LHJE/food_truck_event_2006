@@ -79,6 +79,7 @@ class EventTest < Minitest::Test
     food_truck2.stock(item4, 50)
     food_truck2.stock(item3, 25)
     food_truck3.stock(item1, 65)
+    food_truck3.stock(item3, 10)    
     event.add_food_truck(food_truck1)
     event.add_food_truck(food_truck2)
     event.add_food_truck(food_truck3)
