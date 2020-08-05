@@ -58,7 +58,24 @@ class Event
     sorted_item_list.sort
   end
 
-
+  #Not quite there...
+  # def sell(item, quantity)
+  #   if total_inventory.keys.any?(item)
+  #     total_inventory.map do |inventory|
+  #       if inventory[0] == item && inventory[1][:quantity] >= quantity
+  #         inventory[1][:food_trucks][0].inventory.map do |stocked_item|
+  #           if stocked_item[0] == item
+  #             stocked_item[1] -= quantity
+  #             inventory[1][:quantity] -= quantity
+  #           end
+  #         end
+  #       end
+  #     end
+  #   end
+  #
+  #   binding.pry
+  #
+  # end
 
 
 
